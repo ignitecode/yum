@@ -1,0 +1,55 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1>Create a new Restaurant</h1>
+      <form method="post" action="/restaurants/create">
+        <div class="form-group">
+           <label>Name</label>
+           <input type="text" name="name" class="form-control" placeholder="Enter Name">
+           <small class="form-text text-muted">Enter the restaurants name</small>
+         </div>
+
+         <div class="form-group">
+            <label>City</label>
+            <input type="text" name="city" class="form-control" placeholder="Enter City">
+            <small class="form-text text-muted">Enter the restaurants city</small>
+          </div>
+
+          <div class="form-group">
+             <label>State</label>
+               <input type="text" name="state" class="form-control" placeholder="Enter State">
+             <small class="form-text text-muted">Enter the restaurants state</small>
+           </div>
+
+           <div class="form-group">
+              <label>Zip</label>
+              <input type="text" name="zipCode" class="form-control" placeholder="Enter Zip">
+              <small class="form-text text-muted">Enter the restaurants zip code</small>
+            </div>
+
+            <div class="form-group">
+               <label>Type</label>
+               <input type="text" name="typeOfFood" class="form-control" placeholder="Type of Food">
+               <small class="form-text text-muted">Enter the restaurants type of food</small>
+             </div>
+
+             <div class="form-group">
+                <label>Rating</label>
+                <input type="text" name="rating" class="form-control" placeholder="Enter Rating (1-5)">
+                <small  class="form-text text-muted">Enter the restaurants Rating 1-5</small>
+              </div>
+
+              <div class="form-group">
+                 <label>Yelp Url</label>
+                 <input type="text" name="yelpUrl" class="form-control" placeholder="Enter Yelp Url">
+                 <small class="form-text text-muted">Enter the restaurants yelp url</small>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Save <i class="fas fa-plus"></i>
+              </button>
+          </form>
+    </div>
+  </div>
+</div>

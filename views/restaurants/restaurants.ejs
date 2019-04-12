@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>View Restaurants</h1>
+
+  <div class="row">
+    <% for(let i = 0; i < restaurants.length; i++) { %>
+        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 d-flex align-items-stretch">
+          <div class="card mb-2 ml-2" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><%= restaurants[i].name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= restaurants[i].city %></h6>
+              <p class="card-text">This restaurant serves delicious <%= restaurants[i].typeOfFood %> food and can
+              be found all over the state of <%= restaurants[i].state %>.
+              </p>
+              <a href="<%= restaurants[i].yelpUrl %>" class="card-link">View on Yelp</a>
+            </div>
+          </div>
+        </div>
+    <% } %>
+  </div>
+</div>
