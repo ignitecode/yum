@@ -1,0 +1,37 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+        <th scope="col">Zip</th>
+        <th scope="col">Type</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Yelp</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= restaurant.id %></td>
+        <td><%= restaurant.name %></td>
+        <td><%= restaurant.city %></td>
+        <td><%= restaurant.state %></td>
+        <td><%= restaurant.zipCode %></td>
+        <td><%= restaurant.typeOfFood %></td>
+        <td><%= restaurant.rating %></td>
+        <td><%= restaurant.yelpUrl %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row">
+    <div class="col-md-4 offset-md-3">
+      <form method="post" action="/restaurants/delete/?_method=DELETE">
+        <input type="hidden" value="<%= restaurant.id %>" name="id" />
+        <button type="submit" class="btn btn-danger">Delete <%= restaurant.name %> <i class="fa fa-trash"></i></button>
+      </form>
+    </div>
+  </div>
+</div>

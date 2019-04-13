@@ -9,6 +9,13 @@ router.get('/', (req, res) => {
   });
 });
 
+router.delete('/delete', (req, res) => {
+  const { id } = req.body;
+  restaurant.destroy({ where: { id }}).then(() => {
+    res.redirect('/restaurants');
+  });
+});
+
 router.get('/create', (req, res) => {
     res.render('restaurants/create_restaurant');
 });
@@ -33,6 +40,12 @@ router.put('/update/:id', (req, res) => {
     .then(updatedRestaurant => {
         res.redirect('/restaurants');
     });
+  });
+});
+
+router.get('/:id', (req, res) => {
+  restaurant.findByPk(req.params.id).then(rest => {
+    res.render('restaurants/show_restaurant', { restaurant: rest });
   });
 });
 
